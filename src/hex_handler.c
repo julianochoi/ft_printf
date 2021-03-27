@@ -6,11 +6,11 @@
 /*   By: jchoi-ro <jchoi-ro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 23:26:51 by jchoi-ro          #+#    #+#             */
-/*   Updated: 2021/03/18 22:30:55 by jchoi-ro         ###   ########.fr       */
+/*   Updated: 2021/03/27 00:31:38 by jchoi-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	hex_handler(t_flags *flags, va_list ap)
 {

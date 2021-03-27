@@ -6,7 +6,7 @@
 /*   By: jchoi-ro <jchoi-ro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 17:10:42 by jchoi-ro          #+#    #+#             */
-/*   Updated: 2021/03/19 19:22:16 by jchoi-ro         ###   ########.fr       */
+/*   Updated: 2021/03/27 00:31:23 by jchoi-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "../libft/libft.h"
+# include "libft.h"
 
 typedef struct	s_flags
 {

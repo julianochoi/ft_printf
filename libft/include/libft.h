@@ -6,7 +6,7 @@
 /*   By: jchoi-ro <jchoi-ro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 23:48:11 by jchoi-ro          #+#    #+#             */
-/*   Updated: 2021/03/17 17:13:07 by jchoi-ro         ###   ########.fr       */
+/*   Updated: 2021/03/26 18:38:58 by jchoi-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include "get_next_line.h"
 
 typedef struct	s_list
 {

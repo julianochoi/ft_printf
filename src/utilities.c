@@ -6,11 +6,11 @@
 /*   By: jchoi-ro <jchoi-ro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 15:31:50 by jchoi-ro          #+#    #+#             */
-/*   Updated: 2021/03/18 10:48:20 by jchoi-ro         ###   ########.fr       */
+/*   Updated: 2021/03/27 00:18:48 by jchoi-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int		count_digits(int num)
 {

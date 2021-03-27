@@ -1,36 +1,36 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jchoi-ro <jchoi-ro@student.42sp.org.br>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/02/08 00:31:28 by jchoi-ro          #+#    #+#              #
-#    Updated: 2021/03/10 19:20:56 by jchoi-ro         ###   ########.fr        #
-#                                                                              #
+NAME		=	libft.a
+
+include src.mk
+
 # **************************************************************************** #
 
-SRCS	=	$(wildcard *.c)
-OBJS	=	$(SRCS:.c=.o)
-NAME	=	libft.a
-LIBC	=	ar -rcs
-CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror
-RM		=	rm -f
+SRC			=	$(addprefix src/, $(SRC_FILES))
+OBJ			=	$(SRC:.c=.o)
+INC_DIR		=	include
+LIBC		=	ar -rcs
+CC			=	gcc
+CFLAGS		=	-Wall -Wextra -Werror
+CPPFLAGS	=	$(foreach path, $(INC_DIR), -I $(path))
+RM			=	rm -f
+
+# **************************************************************************** #
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+		@$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $(<:.c=.o)
 
-$(NAME):	$(OBJS)
-		$(LIBC) $(NAME) $(OBJS)
+$(NAME):	$(OBJ)
+		@$(LIBC) $(NAME) $(OBJ)
+		@echo "$(basename $(NAME)) built successfully."
 
 all:	$(NAME)
 
 clean:
-		$(RM) $(OBJS)
+		@$(RM) $(OBJ)
+		@echo "Object files for $(NAME) removed."
 
 fclean:	clean
-		$(RM) $(NAME)
+		@$(RM) $(NAME)
+		@echo "$(NAME) removed."
 
 re:	fclean all
 
